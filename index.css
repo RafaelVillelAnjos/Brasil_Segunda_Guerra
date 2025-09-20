@@ -1,0 +1,429 @@
+.btnFontes {
+    margin: 24px auto 0 auto;
+    display: block;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-family: 'SpecialElite';
+    color: #fff;
+    background: #356C32;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.2s, transform 0.2s;
+}
+.btnFontes:hover {
+    background: #aa8b03;
+    color: #222;
+    transform: scale(1.04);
+}
+.fontes-lista {
+    background: rgba(0,0,0,0.7);
+    border-radius: 12px;
+    padding: 18px 24px;
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.modal-overlay.fadeout {
+    animation: fadeOutModal 0.4s forwards !important;
+}
+.modal-overlay#modal-topicos {
+    position: absolute;
+    top: 2.5%;
+    left: 75%;
+    width: auto;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 1100;
+    display: none;
+}
+.modal-overlay#modal-topicos.active {
+    display: block;
+    opacity: 1;
+    animation: fadeInModal 0.3s forwards;
+    overflow: visible;
+}
+.modal-overlay#modal-topicos .modal-content {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    background: #222d;
+    border-radius: 16px;
+    padding: 14px 12px;
+    min-width: 180px;
+    max-width: 240px;
+    width: 100%;
+    position: relative;
+    margin-top: 0;
+    margin-right: 0;
+    align-items: stretch;
+}
+.btn-topico {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-family: 'SpecialElite';
+    color: #fff;
+    background: #356C32;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.btn-topico:hover {
+    background: #aa8b03;
+    color: #222;
+    transform: scale(1.04);
+}
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s;
+    opacity: 0;
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+    animation: fadeInModal 0.4s forwards;
+    overflow: hidden;
+    
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeOutModal {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.modal-content {
+    background: #222d;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    max-width: 800px;
+    width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: modalIn 0.4s;
+}
+@keyframes modalIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; };
+}
+
+.modal-title {
+    font-family: 'Stencil';
+    font-size: 2.2rem;
+    color: #ddb503;
+    text-align: center;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+    text-shadow: 4px 2px #000;
+}
+.modal-img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+.modal-text {
+    font-family: 'SpecialElite';
+    font-size: 0.95rem;
+    color: #fff;
+    text-align: justify;
+    line-height: 1.7;
+    text-indent: 20px;
+    margin: 0px;
+}
+@font-face {
+    font-family: 'SpecialElite';
+    src: url(/Fontes/SpecialElite.ttf);
+}
+
+@font-face {
+    font-family: 'Stencil';
+    src: url(/Fontes/STENCIL.TTF);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'SpecialElite';
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('Imagens/Fundo.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+header {
+    background-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px 16px 32px;
+}
+
+.logo-feb {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logo-feb:hover{
+    transform: scale(1.05, 1.05);
+}
+
+.logo-feb:active{
+    transform: translateY(-2px);
+}
+
+nav {
+    font-size: 1.1rem;
+}
+
+.topicos {
+    color: #fff;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: 'SpecialElite';
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    background-color: #ffffff00;
+}
+
+.topicos:hover{
+    color: #ddb503;
+    text-decoration: underline 2px #ddb503;
+    transform: scale(1.2, 1.2);
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+}
+
+.banner-img {
+    width: 100%;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.4);
+}
+
+.guerra-section {
+    max-width: 1200px;
+    margin: 40px auto 32px auto;
+    background: rgba(0,0,0,0.6);
+    border-radius: 16px;
+    padding-top: 1px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 30px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    color: #fff;
+}
+
+.introducao{
+    margin-bottom: 50px;
+}
+
+.guerra-titulo {
+    font-family: 'Stencil';
+    font-size: 2.6rem;
+    text-align: center;
+    margin-bottom: 18px;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.guerra-texto {
+    font-family: 'SpecialElite';
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    color: #fff;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.entrada-texto {
+    font-family: 'SpecialElite';
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #fff;
+    text-align: justify;
+    max-width: 730px;
+    text-indent: 20px;
+    margin: 0;
+}
+
+.guerra-conteudo {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 18px;
+    margin-bottom: 50px;
+}
+
+.guerra-img {
+    width: 440px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    margin-top: 20px;
+}
+
+.guerra-textos {
+    flex: 1;
+    min-width: 220px;
+}
+
+.guerra-subtitulo {
+    font-family: 'Stencil';
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.titulo-batalhas{
+    font-family: 'Stencil';
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 18px;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.btns1, .btns2{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;    
+}
+
+.btnMontese, .btnCatello{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    background: #356C32;
+    border: none;
+    border-radius: 8px;
+    font-family: 'SpecialElite';
+    color: #fff;
+    padding: 3px 3px;
+    transition: 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
+}
+
+.btnMontese:hover, .btnCatello:hover{
+    background-color: #aa8b03;
+    transform: scale(0.95, 0.95);
+    color: #000;
+}
+
+.btnTomadas{
+    width: 440px;
+    height: 70px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #356C32;
+    border: none;
+    border-radius: 10px;
+    font-family: 'SpecialElite';
+    color: #fff;
+    transition: 0.3s;
+    margin-bottom: 70px;
+}
+
+.btnTomadas:hover{
+    background-color: #aa8b03;
+    transform: scale(0.95, 0.95);
+    color: #000;
+}
+
+.slogan{
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.slogan-texto{
+    margin-top: -60px;
+}
+
+.slogan h3{
+    font-family: 'Stencil';
+    font-size: 2.6rem;
+    text-align: center;
+    margin-bottom: 18px;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.slogan p{
+    font-family: 'SpecialElite';
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #fff;
+    text-align: justify;
+    max-width: 550px;
+    text-indent: 20px;
+    margin: 0;
+}
+
+.slogan-img{
+    width: 440px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
